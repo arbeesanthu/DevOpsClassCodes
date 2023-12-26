@@ -22,7 +22,7 @@ pipeline {
             steps {
                 withCredentials([usernamePassword(credentialsId: 'dockercred', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
                     sh "echo $PASS | docker login -u $USER --password-stdin"
-                    sh 'docker push akshu20791/akshatimgaddbook:latest'
+                    sh 'docker push santhoshrb/akshatimgaddbook:latest'
                 }
             }
         }
