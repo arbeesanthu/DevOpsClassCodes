@@ -15,7 +15,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 sh 'docker build -t akshatimg .'
-                sh 'docker tag akshatimg:latest akshu20791/akshatimgaddbook:latest'
+                sh 'docker tag akshatimg:latest santhoshrb/akshatimgaddbook:latest'
             }
         }
         stage('Docker login') {
